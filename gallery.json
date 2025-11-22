@@ -1,0 +1,72 @@
+[
+  {
+    "type": "thumb",
+    "title": "Finx Gameplay",
+    "desc": "Thumbnail suggesting Finx is OP",
+    "thumb": "art/art.jpg",
+    "tag": "Thumbnail"
+  },
+  {
+    "type": "thumb",
+    "title": "Friendlist",
+    "desc": "A thumbnail showcasing best friends on a friendlist",
+    "thumb": "art/art2.jpg",
+    "tag": "Thumbnail"
+  },
+  {
+    "type": "thumb",
+    "title": "Investigated Brock",
+    "desc": "A board with an investigation about Brock",
+    "thumb": "art/art3.png",
+    "tag": "Thumbnail"
+  },
+  {
+    "type": "thumb",
+    "title": "Pro vs Alien",
+    "desc": "A thumbnail comparing pro level in ranked and alien fame",
+    "thumb": "art/art4.png",
+    "tag": "Thumbnail"
+  },
+  {
+    "type": "thumb",
+    "title": "Unban Software",
+    "desc": "A thumbnail promoting a software to get unbanned on games",
+    "thumb": "art/art5.jpg",
+    "tag": "Thumbnail"
+  },
+  {
+    "type": "thumb",
+    "title": "Aimbot Activated",
+    "desc": "A thumbnail showcasing an aimbot being activated in Brawl Stars",
+    "thumb": "art/art6.png",
+    "tag": "Thumbnail"
+  },
+  {
+    "type": "banner",
+    "title": "MakeZyro Header",
+    "desc": "A header made for MakeZyro's social media",
+    "thumb": "art/art7.png",
+    "tag": "Header"
+  },
+  {
+    "type": "banner",
+    "title": "Juanamiibo Header",
+    "desc": "Yes! My header is made by me, pretty sick, right?",
+    "thumb": "art/art8.png",
+    "tag": "Header"
+  },
+  {
+    "type": "other",
+    "title": "Juanamiibo Logo",
+    "desc": "Yes! My logo is made by me too",
+    "thumb": "art/art9.png",
+    "tag": "Logo"
+  },
+  {
+    "type": "other",
+    "title": "Lunaris Profile Picture",
+    "desc": "A profile picture made for Lunaris",
+    "thumb": "art/art10.jpg",
+    "tag": "Profile Picture"
+  }
+]
