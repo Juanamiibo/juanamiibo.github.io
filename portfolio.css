@@ -7,7 +7,7 @@
 }
 
 .tempthing {
-    background: linear-gradient(rgba(201, 106, 43, 0.3), rgb(252, 246, 243)), url('orange.jpg') no-repeat center center;
+    background: linear-gradient(rgba(201, 106, 43, 0.3), rgb(252, 246, 243)), url('visuals/Template.png') no-repeat center center;
     background-size: cover;
     padding: 50px 0px 0px;
 }
