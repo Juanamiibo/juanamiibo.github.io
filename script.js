@@ -67,11 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            const subject = `New message from ${name}`;
-            const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-            const mailtoLink = `mailto:juanamiibo879@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-            
-            window.location.href = mailtoLink;
+const subject = `New message from ${name}`;
+            const body = `Name: ${name}, ${message}`;
+            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=juanamiibo879@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(gmailLink, '_blank');
             
             alert('Thank you for your message! Your email client will open to send the message.');
         });
