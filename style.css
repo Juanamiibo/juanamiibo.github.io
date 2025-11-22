@@ -125,7 +125,7 @@ body {
 /* Home Section */
 .home {
     height: 100vh;
-    background: linear-gradient(rgba(201, 106, 43, 0.3), rgb(252, 246, 243)), url('orange.jpg') no-repeat;
+    background: linear-gradient(rgba(201, 106, 43, 0.3), rgb(252, 246, 243)), url('Template\ \(2\).png') no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -477,7 +477,7 @@ section {
 
 /* Services Section */
 .services {
-    background: linear-gradient(rgb(252, 246, 243), rgba(182, 155, 123, 0.678), rgb(252, 246, 243)), url('orange1.jpg') no-repeat center top;
+    background: linear-gradient(rgb(252, 246, 243), rgba(182, 155, 123, 0.678), rgb(252, 246, 243)), url('orange.jpg') no-repeat center top;
   /*  background: rgba(0, 0, 0, 0.2); */
   /*  background: url(miku3.jpg); */
 }
@@ -734,7 +734,7 @@ section {
 /* Footer */
 .footer {
     /*background: rgba(0, 0, 0, 0.3); */
-    background: linear-gradient(rgb(150, 74, 36, 0.4), rgba(172, 75, 11, 0.8)), url('orange1.jpg') no-repeat;
+    background: linear-gradient(rgb(150, 74, 36, 0.4), rgba(172, 75, 11, 0.8)), url('orange.jpg') no-repeat;
     background-position: top;
     padding: 30px 0;
     text-align: center;
