@@ -27,6 +27,26 @@ body {
     background: var(--secondary-color);
     color: var(--text-color);
     overflow-x: hidden;
+    cursor: none;
+}
+
+/* Custom Cursor Styles */
+
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+}
+
+.custom-cursor img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.custom-cursor.hover {
+    transform: scale(1.2);
 }
 
 .container {
@@ -34,6 +54,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
 
 /* Header Styles */
 .header {
@@ -62,6 +83,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     position: relative;
+    cursor: none;
 }
 /*
 .logo::before {
@@ -92,6 +114,7 @@ body {
 
 .navbar a:hover, .navbar a.active {
     color: var(--primary-color);
+    cursor: none;
 }
 
 .navbar a::after {
@@ -112,7 +135,7 @@ body {
 .menu-toggle {
     display: none;
     flex-direction: column;
-    cursor: pointer;
+    cursor: none;
 }
 
 .menu-toggle span {
@@ -262,6 +285,7 @@ lue-blur-overlay {
 
 .btn-primary:hover, .btn-secondary:hover {
     color: var(--primary-color);
+    cursor: none;
 }
 
 .btn-secondary:hover {
@@ -330,6 +354,7 @@ lue-blur-overlay {
 
 .home-sci a:hover {
     color: var(--secondary-color);
+    cursor: none;
 }
 
 .home-sci a::before {
@@ -1032,7 +1057,7 @@ section {
  /* blend mods also work with everything */
  /* github is good for version control */
  /* never show html without style.css */
- /* you can use multiple css files to avoid long code */
+ /* you can use multiple css files to avoid long code(whatever you want)*/
  /* always link css files in head */
  /* class and id are different */
  /* id is unique class can be reused */
@@ -1058,9 +1083,6 @@ section {
  /* touch grass sometimes */
  /* it's a shame to not learn from mistakes (i still do it tho) */
  /* don't pay for tutorials documentation is everything */
- /* i starter on phone very hard but possible */
- /* i was teaching my classmates don't be shy calling me teacher :D */
- /* hatsune miku is love */
  /* happy coding :) */
 
  /* ------------------------------------------ */
@@ -1142,7 +1164,7 @@ section {
     }
 }
 
-/* idk i will add mmissing hovers and stuff */ 
+/* idk i will add missing hovers and stuff */ 
 
 
 .image-frame {
@@ -1287,6 +1309,7 @@ section {
     font-size: 16px;
     cursor: pointer;
     transition: var(--transition);
+    cursor: none;
 }
 
 .filter-btn:hover, .filter-btn.active {
@@ -1692,6 +1715,23 @@ section {
         margin-top: 20px;
         margin-bottom: 48px;
     }
+}
+
+
+/* Center Contact CTA on main page */
+.contact-cta .container {
+    place-self: center;
+    text-align: center;
+}
+.contact-cta p {
+    max-width: 800px;
+    margin: 0 auto 24px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.contact-cta .btn-box {
+    justify-content: center;
+    align-items: center;
 }
 
 
