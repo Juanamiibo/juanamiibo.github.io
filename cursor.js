@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create and add the cursor image
     const cursorImg = document.createElement('img');
-    cursorImg.src = 'cursor/Cursor.png';
+    cursorImg.src = 'cursor/cursor.png';
     cursorImg.alt = 'cursor';
     cursor.appendChild(cursorImg);
     
