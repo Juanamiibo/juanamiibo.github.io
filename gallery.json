@@ -68,5 +68,12 @@
     "desc": "A profile picture made for Lunaris",
     "thumb": "art/art10.jpg",
     "tag": "Profile Picture"
+  },
+  {
+    "type": "thumbnail",
+    "title": "Mythic to masters",
+    "desc": "Thumbnail showcasing the progression from mythic to masters",
+    "thumb": "art/art11.jpg",
+    "tag": "Thumbnail"
   }
 ]
