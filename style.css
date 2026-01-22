@@ -21,32 +21,20 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
     background: var(--secondary-color);
     color: var(--text-color);
     overflow-x: hidden;
-    cursor: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Custom Cursor Styles */
-
-.custom-cursor {
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
-}
-
-.custom-cursor img {
-    width: 32px;
-    height: 32px;
-    display: block;
-}
-
-.custom-cursor.hover {
-    transform: scale(1.2);
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -83,11 +71,11 @@ body {
     text-decoration: none;
     font-weight: 600;
     position: relative;
-    cursor: none;
 }
 /*
+Removed
 .logo::before {
-    content: ''; /* the line six sevennnnnnnnnn 
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -114,7 +102,6 @@ body {
 
 .navbar a:hover, .navbar a.active {
     color: var(--primary-color);
-    cursor: none;
 }
 
 .navbar a::after {
@@ -134,8 +121,7 @@ body {
 
 .menu-toggle {
     display: none;
-    flex-direction: column;
-    cursor: none;
+    flex-direction: column
 }
 
 .menu-toggle span {
@@ -184,6 +170,7 @@ lue-blur-overlay {
     margin-bottom: 10px;
 }
 /*
+Removed
 .home-content h1::before {
     content: '';
     position: absolute;
@@ -204,6 +191,7 @@ lue-blur-overlay {
     margin-bottom: 20px;
 }
 /*
+Removed
 .home-content h3::before {
     content: '';
     position: absolute;
@@ -223,6 +211,7 @@ lue-blur-overlay {
     line-height: 1.6;
 }
 /*
+Removed
 .home-content p::before {
     content: '';
     position: absolute;
@@ -244,6 +233,7 @@ lue-blur-overlay {
     height: 50px;
 }
 /*
+Removed
 .btn-box::before {
     content: '';
     position: absolute;
@@ -279,16 +269,17 @@ lue-blur-overlay {
 }
 
 .btn-secondary {
-    background: transparent;
+    background: var(--transparent-color);
     color: var(--primary-color);
 }
 
 .btn-primary:hover, .btn-secondary:hover {
     color: var(--primary-color);
-    cursor: none;
+    background: var(--transparent-color);
 }
 
 .btn-secondary:hover {
+    background: var(--primary-color);
     color: var(--secondary-color);
 }
 
@@ -296,10 +287,10 @@ lue-blur-overlay {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: 100%;
     width: 0;
     height: 100%;
-    background: var(--secondary-color);
+    background: var(--transparent-color);
     z-index: -1;
     transition: var(--transition);
 }
@@ -321,6 +312,7 @@ lue-blur-overlay {
     z-index: 2;
 }
 /*
+Removed
 .home-sci::before {
     content: '';
     position: absolute;
@@ -354,7 +346,6 @@ lue-blur-overlay {
 
 .home-sci a:hover {
     color: var(--secondary-color);
-    cursor: none;
 }
 
 .home-sci a::before {
@@ -549,24 +540,55 @@ section {
 
 /* Contact Section email/name ect .... */
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    align-items: center;
+}
+
+/* Make the contact section expand to fill available viewport height
+   so the footer stays at the bottom and no extra background shows */
+.contact {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .contact-info h3 {
     font-size: 24px;
     margin-bottom: 20px;
     color: var(--primary-color);
+    text-align: center;
 }
 
 .contact-info p {
     line-height: 1.6;
     margin-bottom: 30px;
+    text-align: center;
+}
+
+.contacthtml {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: left;
+    /* background image for contact page */
+    background: linear-gradient(rgba(201, 106, 43, 0.18), rgba(252, 246, 243, 0.0)), url('visuals/Template.png') no-repeat center center;
+    background-size: cover;
+    margin-left: 0px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 60px;
+    padding: 0 20px;
 }
 
 .contact-details {
+    display: grid;
     margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-header {
+    background: radial-gradient(rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0));
 }
 
 /* .contact-item {
@@ -650,6 +672,9 @@ section {
     backdrop-filter: blur(10px);
     overflow: hidden;
     margin-bottom: 25px;
+    background:radial-gradient(rgba(255, 255, 255, 0.712), rgba(255, 255, 255, 0.377));
+    -webkit-backdrop-filter: invert(40%);
+    backdrop-filter: invert(20%);
 }
 
 .form-group {
@@ -675,7 +700,7 @@ section {
 
 .form-group textarea {
     padding: 25px 20px 15px 60px;
-    resize: vertical;
+    resize: none;
     min-height: 120px;
 }
 
@@ -744,13 +769,13 @@ section {
 }
 
 /* Button */
-.contact-form .btn-primary {
+.contact-button {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 100%;
-    height: 55px;
+    width: 350px;
+    height: 45px;
     font-size: 1.1rem;
     border-radius: 10px;
     transition: var(--transition);
@@ -869,7 +894,7 @@ section {
         max-width: 100%;
     }
     
-    .btn-primary, .btn-secondary {
+    .btn-primary::before, .btn-secondary {
         height: 50px;
     }
     
@@ -1309,7 +1334,6 @@ section {
     font-size: 16px;
     cursor: pointer;
     transition: var(--transition);
-    cursor: none;
 }
 
 .filter-btn:hover, .filter-btn.active {
@@ -1733,6 +1757,3 @@ section {
     justify-content: center;
     align-items: center;
 }
-
-
-

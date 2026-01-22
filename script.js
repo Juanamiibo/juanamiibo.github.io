@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navbar = document.querySelector('.navbar');
     
@@ -15,15 +16,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Scroll
+    
     const header = document.querySelector('.header');
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 100/*edit to makke shadow appear sooner or later*/) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
     });
     
+    // Active Section   
+
     const sections = document.querySelectorAll('section');
     window.addEventListener('scroll', function() {
         let current = '';
@@ -43,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Skills
+    
     const skillBars = document.querySelectorAll('.skill-progress');
     
     const observer = new IntersectionObserver((entries) => {
@@ -58,6 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(bar);
     });
     
+    // Contact
+    
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -71,11 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=juanamiibo879@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.open(gmailLink, '_blank');
             
-            const mailtoLink = `mailto:juanamiibo879@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+            const mailtoLink = /*edit to your mail here->*/`mailto:juanamiibo879@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
             
             window.location.href = mailtoLink;
-            
-            alert('Thank you for your message! Your email client will open to send the message.');
         });
     }
     
