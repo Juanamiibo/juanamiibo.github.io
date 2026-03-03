@@ -46,8 +46,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     const filterValue = this.getAttribute('data-filter');
 
                     portfolioItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        const matches = (filterValue === 'all' || item.getAttribute('data-category') === filterValue);
+
+                        if (matches) {
+                            // make sure item is visible
                             item.classList.remove('hidden');
+
+                            // retrigger fade-in animation every time filter changes
+                            item.classList.remove('fade-in');
+                            // force reflow so the browser registers the class removal
+                            void item.offsetWidth;
+                            item.classList.add('fade-in');
+
+                            // clean up the class after animation ends
+                            const onAnimEnd = function() {
+                                item.classList.remove('fade-in');
+                                item.removeEventListener('animationend', onAnimEnd);
+                            };
+                            item.addEventListener('animationend', onAnimEnd);
                         } else {
                             item.classList.add('hidden');
                         }

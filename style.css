@@ -566,18 +566,26 @@ section {
 
 .contacthtml {
     flex: 1 0 auto;
+    padding: 78px 0px;
+    padding-bottom: 0px;
     display: flex;
-    align-items: left;
     /* background image for contact page */
     background: linear-gradient(rgba(201, 106, 43, 0.18), rgba(252, 246, 243, 0.0)), url('visuals/Template.png') no-repeat center center;
     background-size: cover;
     margin-left: 0px;
+    
 }
 
 .contact-container {
+    min-width: 60vh;
+    min-height: 87.65vh;
     max-width: 1200px;
-    margin: 60px;
-    padding: 0 20px;
+    height: 100%;
+    margin: 0px;
+    padding: 20px 50px;
+    padding-right: 500px;
+    padding-bottom: 0px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.50), rgb(255, 255, 255, 0.50), rgb(255, 255, 255, 0.50), rgba(252, 246, 243, 0.0));
 }
 
 .contact-details {
@@ -588,7 +596,8 @@ section {
 }
 
 .contact-header {
-    background: radial-gradient(rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0));
+    color: #ff2600;
+    /*background: radial-gradient(rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0));*/
 }
 
 /* .contact-item {
@@ -672,9 +681,9 @@ section {
     backdrop-filter: blur(10px);
     overflow: hidden;
     margin-bottom: 25px;
-    background:radial-gradient(rgba(255, 255, 255, 0.712), rgba(255, 255, 255, 0.377));
+    /*background:radial-gradient(rgba(255, 255, 255, 0.712), rgba(255, 255, 255, 0.377));
     -webkit-backdrop-filter: invert(40%);
-    backdrop-filter: invert(20%);
+    backdrop-filter: invert(20%);*/
 }
 
 .form-group {
@@ -1279,4 +1288,68 @@ section {
 .contact-cta .btn-box {
     justify-content: center;
     align-items: center;
+}
+
+/*Button outline feature*/
+
+.btn-outline {
+  position: relative;
+  padding: 12px 28px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+
+.btn-outline::before,
+.btn-outline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #00f0ff;
+  transition: width 0.3s ease;
+}
+
+.btn-outline::before {
+  top: 0;
+  left: 0;
+}
+
+.btn-outline::after {
+  bottom: 0;
+  right: 0;
+}
+
+.btn-outline span::before,
+.btn-outline span::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background: #00f0ff;
+  transition: height 0.3s ease 0.3s;
+}
+
+.btn-outline span::before {
+  top: 0;
+  right: 0;
+}
+
+.btn-outline span::after {
+  bottom: 0;
+  left: 0;
+}
+
+.btn-outline:hover::before,
+.btn-outline:hover::after {
+  width: 100%;
+}
+
+.btn-outline:hover span::before,
+.btn-outline:hover span::after {
+  height: 100%;
 }
