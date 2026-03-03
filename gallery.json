@@ -70,7 +70,7 @@
     "tag": "Profile Picture"
   },
   {
-    "type": "thumbnail",
+    "type": "thumb",
     "title": "Mythic to masters",
     "desc": "Thumbnail showcasing the progression from mythic to masters",
     "thumb": "art/art11.jpg",
