@@ -129,7 +129,11 @@ Removed
     height: 3px;
     background: var(--text-color);
     margin: 3px 0;
-    transition: var(--transition);
+    transition: 0.3s;
+}
+
+.middle-span {
+    transition: none;
 }
 
 /* Home Section */
@@ -1352,4 +1356,19 @@ section {
 .btn-outline:hover span::before,
 .btn-outline:hover span::after {
   height: 100%;
+}
+
+.contact-cta .container {
+    place-self: center;
+    text-align: center;
+}
+.contact-cta p {
+    max-width: 800px;
+    margin: 0 auto 24px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.contact-cta .btn-box {
+    justify-content: center;
+    align-items: center;
 }

@@ -75,17 +75,17 @@
     <a href="#" class="logo">Juan</a>
 
         <nav class="navbar">
-            <a href="#" class="active">Home</a>
+            <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
             <a href="portfolio.html">Portfolio</a>
-            <a href="rev_alt.html">Reviews</a>
-            <a href="contact.html">Contact</a>
+            <a href="reviews.html">Reviews</a>
         </nav>
         
         <div class="menu-toggle">
             <span></span>
-            <span></span>
+            <span class="middle-span"></span>
             <span></span>
         </div>
     </header>
@@ -105,7 +105,7 @@
         <div class="home-sci">
             <a href="https://github.com/Juanamiibo" aria-label="GitHub"><i class='bx bxl-github'></i></a>
             <a href="https://www.behance.net/juanamiibo" aria-label="Behance"><i class='bx bxl-behance'></i></a>
-            <a href="https://x.com/juanamiiboi" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+            <a href="https://x.com/juanamiibo" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
             <a href="https://discord.gg/bSPHGGdYQw" aria-label="Discord"><i class='bx bxl-discord-alt'></i></a>
         </div>
 
@@ -141,15 +141,15 @@
                         <p>Year of Experience</p>
                     </div>
                     <div class="skill-read-card">
-                        <h4 class="skill-card-info">29</h4>
+                        <h4 class="skill-card-info">34</h4>
                         <p>Comissions Completed</p>
                     </div>
                     <div class="skill-read-card">
-                        <h4 class="skill-card-info">11</h4>
+                        <h4 class="skill-card-info">15</h4>
                         <p>Happy Clients</p>
                     </div>
                     <div class="skill-read-card">
-                        <h4 class="skill-card-info">152K+</h4>
+                        <h4 class="skill-card-info">319K+</h4>
                         <p>Views Generated</p>
                     </div>
                 </div>
@@ -198,11 +198,11 @@
                 <p>Perfect for YouTubers, Streamers & Gaming Brands, Focus on gaming visuals (not corporate branding).</p>
                 <ul class="service-features">
                     <li>YouTube Thumbnails (Game-focused)</li>
-                    <li>Supercell & Minecraft Designs</li>
+                    <li>Gaming Designs</li>
                     <li>Social Media Headers</li>
                     <li>Social Media Anouncements</li>
                     <li>Profile Pictures (PFPS)</li>
-                    <li>Custom Renders (Supercell/Minecraft)</li>
+                    <li>Custom Game Renders</li>
                 </ul>
                 <div class="serv-extras">
                     <p>Revisions Included</p>
@@ -231,10 +231,34 @@
                             <i class='bx bx-time'></i>
                             <span>Fast Response Within 24 Hours</span>
                         </div>
-                    <div class="contact-button">
-                        <a href="contact.html" class="btn-primary" class="btn-outline">Contact Me</a>   
+                     <div class="contact-button"> 
+
                     </div>
                 </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-container">
+                        <div class="form-group">
+                            <i class='bx bx-user'></i>
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                             <i class='bx bx-envelope'></i>
+                             <input type="email" id="email" placeholder=" " required>
+                             <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <i class='bx bx-message-dots'></i>
+                             <textarea id="message" placeholder=" " rows="5" required></textarea>
+                             <label for="message">Your Message</label>
+                        </div>
+                       </div>
+                       <button type="submit" class="btn-primary">
+                            <i class='bx bx-send'></i>
+                            <span>Send Message</span>
+                       </button>
+                      </form>
+                     </div>
             </div>
         </div>
     </section>
