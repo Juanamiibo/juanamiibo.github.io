@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (emailContactButton && contactForm) {
         emailContactButton.addEventListener('click', function() {
             contactForm.classList.remove('hidden');
-            document.getElementById('name').focus();
+            document.getElementById('message').focus();
             contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     }
@@ -95,11 +95,9 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            const subject = `Web message from ${name}`;
-            const body = `Name: ${name} Email: ${email} Message:${message}`;
+            const subject = 'Website contact request';
+            const body = `Message: ${message}`;
             
             // Show success message
             const successMessage = document.getElementById('successMessage');

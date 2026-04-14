@@ -708,6 +708,7 @@ section {
 .contact-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 35px rgba(247, 92, 3, 0.14);
+    border-color: var(--primary-color);
 }
 
 .contact-card-meta {
