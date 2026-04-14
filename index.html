@@ -78,6 +78,7 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#prices">Prices</a>
             <a href="#contact">Contact</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="reviews.html">Reviews</a>
@@ -97,16 +98,9 @@
             <h3>Graphic Designer</h3>
             <p>I create visually stunning designs that capture attention and communicate your message effectively. With a keen eye for detail and a passion for storytelling, I bring ideas to life through digital media.</p>
             <div class="btn-box">
-                <a href="#contact" class="btn-primary">Hire Me</a>
-                <a href="portfolio.html" class="btn-secondary">Portfolio</a>
+                <a href="portfolio.html" class="btn-primary">Portfolio</a>
+                <a href="#prices" class="btn-secondary">Hire Me</a>
             </div>
-        </div>
-
-        <div class="home-sci">
-            <a href="https://github.com/Juanamiibo" aria-label="GitHub"><i class='bx bxl-github'></i></a>
-            <a href="https://www.behance.net/juanamiibo" aria-label="Behance"><i class='bx bxl-behance'></i></a>
-            <a href="https://x.com/juanamiibo" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
-            <a href="https://discord.gg/bSPHGGdYQw" aria-label="Discord"><i class='bx bxl-discord-alt'></i></a>
         </div>
 
         <div class="scroll-indicator">
@@ -214,6 +208,53 @@
     </div>
 </section>
 
+    <section class="prices" id="prices">
+        <div class="container">
+            <h2 class="section-title">Prices</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card popular">
+                    <h3>Basic Package</h3>
+                    <div class="price">10€</div>
+                    <ul class="pricing-features">
+                        <li>Simple Thumbnail or PFP</li>
+                        <li>3 Revisions</li>
+                        <li>Fast Delivery (2-3 days)</li>
+                        <li>High-Resolution Files</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Standard Package</h3>
+                    <div class="price">16€</div>
+                    <ul class="pricing-features">
+                        <li>Custom Design</li>
+                        <li>5 Revisions</li>
+                        <li>Fast Delivery (1-2 days)</li>
+                        <li>High-Resolution Files</li>
+                        <li>Source Files Included</li>
+                        <li>Priority Support Over Basic</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium Package</h3>
+                    <div class="price">25€</div>
+                    <ul class="pricing-features">
+                        <li>Two Premium Designs</li>
+                        <li>Unlimited Revisions</li>
+                        <li>Express Delivery (24 hours)</li>
+                        <li>High-Resolution Files</li>
+                        <li>Source Files Included</li>
+                        <li>Commercial Use Rights</li>
+                        <li>Two Designs Of Your Choice</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
@@ -222,31 +263,51 @@
                     <h3>Let's create something amazing together</h3>
                     <p>Have a project in mind? Contact me and let's discuss how we can bring your vision to life.</p>
                     
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class='bx bx-envelope'></i>
-                            <span>Email available on request</span>
+                    <div class="contact-actions">
+                        <div class="contact-card">
+                            <div class="contact-card-meta">
+                                <i class='bx bxl-discord-alt'></i>
+                                <div class="contact-card-text">
+                                    <h4>Discord</h4>
+                                    <p>Join my server and open a ticket for fast support.</p>
+                                </div>
+                            </div>
+                            <a href="https://discord.gg/bSPHGGdYQw" class="btn-primary contact-action" target="_blank">Open Discord</a>
                         </div>
-                        <div class="contact-item">
-                            <i class='bx bx-time'></i>
-                            <span>Fast Response Within 24 Hours</span>
+                        <div class="contact-card">
+                            <div class="contact-card-meta">
+                                <i class='bx bx-envelope'></i>
+                                <div class="contact-card-text">
+                                    <h4>Email</h4>
+                                    <p>Send a request directly through the contact form.</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-primary contact-action" id="emailContactButton">Contact by Email</button>
                         </div>
-                     <div class="contact-button"> 
-
+                        <div class="contact-card">
+                            <div class="contact-card-meta">
+                                <i class='bx bxl-behance'></i>
+                                <div class="contact-card-text">
+                                    <h4>Behance</h4>
+                                    <p>See my latest projects and send me a direct message.</p>
+                                </div>
+                            </div>
+                            <a href="https://www.behance.net/juanamiibo" class="btn-primary contact-action" target="_blank">View Behance</a>
+                        </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form hidden" id="contactForm">
+                    <div class="form-header">
+                        <h3>Send me a Message</h3>
+                        <button type="button" class="close-form" id="closeFormButton" aria-label="Close form">
+                            <i class='bx bx-x'></i>
+                        </button>
+                    </div>
+                    <div class="form-success-message hidden" id="successMessage">
+                        <i class='bx bx-check-circle'></i>
+                        <span>Message sent successfully! Opening your email client...</span>
+                    </div>
                     <div class="form-container">
-                        <div class="form-group">
-                            <i class='bx bx-user'></i>
-                            <input type="text" id="name" placeholder=" " required>
-                            <label for="name">Your Name</label>
-                        </div>
-                        <div class="form-group">
-                             <i class='bx bx-envelope'></i>
-                             <input type="email" id="email" placeholder=" " required>
-                             <label for="email">Your Email</label>
-                        </div>
                         <div class="form-group">
                             <i class='bx bx-message-dots'></i>
                              <textarea id="message" placeholder=" " rows="5" required></textarea>

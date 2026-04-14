@@ -68,7 +68,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact
     
     const contactForm = document.getElementById('contactForm');
+    const emailContactButton = document.getElementById('emailContactButton');
+
+    if (emailContactButton && contactForm) {
+        emailContactButton.addEventListener('click', function() {
+            contactForm.classList.remove('hidden');
+            document.getElementById('name').focus();
+            contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
+
     if (contactForm) {
+        const closeFormButton = document.getElementById('closeFormButton');
+
+        // Close button functionality
+        if (closeFormButton) {
+            closeFormButton.addEventListener('click', function() {
+                contactForm.classList.add('hidden');
+                const successMessage = document.getElementById('successMessage');
+                if (successMessage) {
+                    successMessage.classList.add('hidden');
+                }
+            });
+        }
+
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -77,12 +100,30 @@ document.addEventListener('DOMContentLoaded', function() {
             const message = document.getElementById('message').value;
             const subject = `Web message from ${name}`;
             const body = `Name: ${name} Email: ${email} Message:${message}`;
+            
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            if (successMessage) {
+                successMessage.classList.remove('hidden');
+            }
+
+            // Reset form fields
+            contactForm.reset();
+
             const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=juanamiibo879@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.open(gmailLink, '_blank');
             
             const mailtoLink = /*edit to your mail here->*/`mailto:juanamiibo879@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
             
             window.location.href = mailtoLink;
+
+            // Auto-hide form and success message after 3 seconds
+            setTimeout(function() {
+                contactForm.classList.add('hidden');
+                if (successMessage) {
+                    successMessage.classList.add('hidden');
+                }
+            }, 3000);
         });
     }
     
