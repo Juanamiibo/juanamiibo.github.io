@@ -140,7 +140,7 @@ Removed
 /* Home Section */
 .home {
     height: 100vh;
-    background: linear-gradient(rgba(201, 106, 43, 0.3), rgb(252, 246, 243)), url('visuals/Template (2).png') no-repeat;
+    background: linear-gradient(rgba(201, 106, 43, 0.3), rgb(252, 246, 243)), url('visuals/Template (2).webp') no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -162,6 +162,35 @@ lue-blur-overlay {
     z-index: 1;
 }
 
+.home-status-banner {
+    position: relative;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    font-size: 26px;
+    font-weight: 550;
+    color: var(--text-color);
+    border: 1px solid rgba(247, 92, 3, 0.18);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.home-status-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(247, 92, 3, 0.5);
+}
+
+.home-status-banner strong {
+    color: red;
+    font-weight: 650;
+}
+
 .home-content {
     max-width: 600px;
     z-index: 2;
@@ -172,6 +201,7 @@ lue-blur-overlay {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 /*
@@ -409,6 +439,67 @@ section {
     padding: 100px 0;
 }
 
+/* FAQ styles */
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 12px;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(8,27,41,0.05);
+    cursor: pointer;
+    padding: 14px 18px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 20px;
+    transition: transform 0.25s ease;
+}
+
+.faq-item.open .faq-question::after {
+    content: '-';
+}
+
+.faq-answer {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease, opacity 200ms ease;
+    opacity: 0;
+}
+
+.faq-item.open .faq-answer {
+    opacity: 1;
+}
+
+
 .section-title {
     text-align: center;
     font-size: 36px;
@@ -512,9 +603,9 @@ section {
 
 /* Services Section */
 .services {
-    background: linear-gradient(rgb(252, 246, 243), rgba(182, 155, 123, 0.678), rgb(252, 246, 243)), url('visuals/orange.jpg') no-repeat center top;
+    background: linear-gradient(rgb(252, 246, 243), rgba(182, 155, 123, 0.678), rgb(252, 246, 243)), url('visuals/orange.webp') no-repeat center top;
   /*  background: rgba(0, 0, 0, 0.2); */
-  /*  background: url(miku3.jpg); */
+  /*  background: url(miku3.webp); */
 }
 
 .services-grid {
@@ -650,7 +741,7 @@ section {
     display: flex;
     align-items: center;
     width: 100%;
-    background: linear-gradient(rgba(252, 246, 243, 1), rgba(182, 155, 123, 0.6), rgba(252, 246, 243, 1)), url('visuals/Template.png') no-repeat center center;
+    background: linear-gradient(rgba(252, 246, 243, 1), rgba(182, 155, 123, 0.6), rgba(252, 246, 243, 1)), url('visuals/Template.webp') no-repeat center center;
     background-size: cover;
 }
 

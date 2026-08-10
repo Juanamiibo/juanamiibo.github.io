@@ -1,13 +1,13 @@
 .portfolio-hero {
    /* padding: 250px 0 80px; */
     text-align: center;
-   /* background: linear-gradient(rgba(8, 27, 41, 0.8), rgba(8, 27, 41, 0.9)), url('miku3.jpg') no-repeat top center; */
+   /* background: linear-gradient(rgba(8, 27, 41, 0.8), rgba(8, 27, 41, 0.9)), url('miku3.webp') no-repeat top center; */
    /* background-size: cover; */
 
 }
 
 .tempthing {
-    background: linear-gradient(rgba(201, 106, 43, 0.3), rgb(252, 246, 243)), url('visuals/Template.png') no-repeat center center;
+    background: linear-gradient(rgba(201, 106, 43, 0.3), rgb(252, 246, 243)), url('visuals/Template.webp') no-repeat center center;
     background-size: cover;
     padding: 50px 0px 0px;
 }

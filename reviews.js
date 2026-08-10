@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const featured = document.createElement('div');
         featured.className = 'review-card featured';
         featured.innerHTML = `
-          <img src="${juan.image || 'visuals/pfp.jpg'}" alt="${juan.author}" class="review-pfp">
+          <img src="${juan.image || 'visuals/pfp.webp'}" alt="${juan.author}" class="review-pfp">
           <div class="review-content">
             <div class="review-meta">
               <span class="review-author">${juan.author || ''}</span>
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = 'review-card';
         card.innerHTML = `
-          <img src="${r.image || 'visuals/pfp.jpg'}" alt="${r.author || 'Reviewer'}" class="review-pfp">
+          <img src="${r.image || 'visuals/pfp.webp'}" alt="${r.author || 'Reviewer'}" class="review-pfp">
           <div class="review-content">
             <div class="review-meta">
               <span class="review-author">${r.author || ''}</span>

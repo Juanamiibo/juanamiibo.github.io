@@ -23,16 +23,16 @@
     <meta property="og:title" content="Juan | Designer">
     <meta property="og:description" content="Professional designer creating stunning visuals and digital experiences.">
     <meta property="og:url" content="https://juanamiibo.github.io/">
-    <meta property="og:image" content="https://juanamiibo.github.io/visuals/juan_pfp.png">
+    <meta property="og:image" content="https://juanamiibo.github.io/visuals/juan_pfp.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Juan portfolio preview – professional designer">
+    <meta property="og:image:alt" content="Juan portfolio preview - professional designer">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Juan | Designer">
     <meta name="twitter:description" content="Professional designer creating stunning visuals and digital experiences.">
-    <meta name="twitter:image" content="https://juanamiibo.github.io/visuals/juan_pfp.png">
+    <meta name="twitter:image" content="https://juanamiibo.github.io/visuals/juan_pfp.webp">
     <meta name="twitter:site" content="@juanamiibo">
 
     <!-- Styles -->
@@ -78,9 +78,10 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#prices">Prices</a>
+            <!--<a href="#services">Services</a>
+            <a href="#prices">Prices</a>-->
             <a href="#contact">Contact</a>
+            <a href="#faq">FAQs</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="reviews.html">Reviews</a>
         </nav>
@@ -95,6 +96,10 @@
     <section class="home" id="home">
         <div class="blue-blur-overlay"></div>
         <div class="home-content">
+            <div class="home-status-banner">
+                <span>Commissions:</span>
+                <strong>Closed</strong>
+            </div>
             <h1>Hi, I'm Juan</h1>
             <h3>Graphic Designer</h3>
             <p>I create visually stunning designs that capture attention and communicate your message effectively. With a keen eye for detail and a passion for storytelling, I bring ideas to life through digital media.</p>
@@ -171,7 +176,7 @@
             
             <div class="about-image">
                 <div class="image-frame">
-                    <img src="visuals/juan_pfp.png" alt="Juan - Creative Designer" class="about-pfp">
+                    <img src="visuals/juan_pfp.webp" alt="Juan - Creative Designer" class="about-pfp">
                     <div class="image-glow"></div>
                 </div>
             </div>
@@ -182,8 +187,9 @@
  <!--old (poor, messy, just words)-->
  <!--new (catchy, engaging, detailed)-->
  <!-- added features and extras using ul -->
-  <!-- to do: add crossed features for unavailable services, upcoming features -->
-    <section class="services" id="services">
+<!-- to do: add crossed features for unavailable services, upcoming features -->
+  <!--Remove comments to enable the Services and Prices sections below. They are currently commented out because commissions are closed.-->  
+  <!--<section class="services" id="services">
     <div class="container">
         <h2 class="section-title">My Services</h2>
         <div class="services-grid">
@@ -209,7 +215,9 @@
     </div>
 </section>
 
-    <section class="prices" id="prices">
+    
+
+        <section class="prices" id="prices">
         <div class="container">
             <h2 class="section-title">Prices</h2>
             <div class="pricing-grid">
@@ -254,7 +262,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <section class="contact" id="contact">
         <div class="container">
@@ -325,7 +333,76 @@
             </div>
         </section>
 
-    <footer class="footer">
+        <section class="faq" id="faq">
+                <div class="container">
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                        <div class="faq-list">
+                                <!--Remove comments to enable the FAQ items below. They are currently commented out because commissions are closed.-->
+                                <!--<div class="faq-item">
+                                        <button class="faq-question" aria-expanded="false">How long does a typical project take?</button>
+                                        <div class="faq-answer" hidden>Typical delivery times range from <strong>1-3 days</strong> for small assets like thumbnails or PFPs. Larger branding or multi-piece projects take longer — delivery time is agreed per project.</div>
+                                </div>
+                                <div class="faq-item">
+                                        <button class="faq-question" aria-expanded="false">What is your revision policy?</button>
+                                        <div class="faq-answer" hidden>I include a set number of revisions depending on the package. Additional adjustments can be requested for a small fee.</div>
+                                </div>
+                                <div class="faq-item">
+                                        <button class="faq-question" aria-expanded="false">How do I send you project details?</button>
+                                        <div class="faq-answer" hidden>Use the contact form, email, or join the Discord server linked in the Contact section to send instructions, references and assets.</div>
+                                </div>
+                                <div class="faq-item">
+                                        <button class="faq-question" aria-expanded="false">What payment methods do you accept?</button>
+                                        <div class="faq-answer" hidden>I accept payments via <strong>PayPal</strong>, <strong>cryptocurrency</strong>, <strong>spanish giftcards</strong>... — details are provided after you confirm the order.</div>
+                                </div>-->
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false">When will you take commissions again?</button>
+                                        <div class="faq-answer" hidden>I have no plans on starting new commissions at the moment.</div>
+                                </div>
+                        </div>
+                </div>
+
+                <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How long does a typical project take?",
+            "acceptedAnswer": {"@type": "Answer","text": "Typical delivery times range from 1-3 days for small assets like thumbnails or PFPs. Larger branding or multi-piece projects take longer — delivery time is agreed per project."}
+        },
+        {
+            "@type": "Question",
+            "name": "What is your revision policy?",
+            "acceptedAnswer": {"@type": "Answer","text": "I include a set number of revisions depending on the package. Additional adjustments can be requested for a small fee."}
+        },
+        {
+            "@type": "Question",
+            "name": "How do I send you project details?",
+            "acceptedAnswer": {"@type": "Answer","text": "Use the contact form, email, or join the Discord server linked in the Contact section to send instructions, references and assets."}
+        },
+        {
+            "@type": "Question",
+            "name": "Do you provide source files?",
+            "acceptedAnswer": {"@type": "Answer","text": "Source files (PSD files) are included with certain packages — check the package details before ordering."}
+        },
+        {
+            "@type": "Question",
+            "name": "What payment methods do you accept?",
+            "acceptedAnswer": {"@type": "Answer","text": "I accept payments via <strong>PayPal</strong>, <strong>cryptocurrency</strong>, <strong>spanish giftcards</strong>... — details are provided after you confirm the order."}
+        },
+        {
+            "@type": "Question",
+            "name": "When will you take commissions again?",
+            "acceptedAnswer": {"@type": "Answer","text": "I have no plans on starting new commissions at the moment."}
+        }
+    ]
+}
+</script>
+
+        </section>
+
+        <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Juan. All rights reserved.</p>
         </div>

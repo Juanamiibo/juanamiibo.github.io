@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=juanamiibo879@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.open(gmailLink, '_blank');
             
-            const mailtoLink = /*edit to your mail here->*/`mailto:juanamiibo879@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+            const mailtoLink = /*if you clone this, edit to your mail here->*/`mailto:juanamiibo879@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
             
             window.location.href = mailtoLink;
 
@@ -125,4 +125,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+});
+
+// FAQ accordion behavior with slide animation
+document.addEventListener('DOMContentLoaded', function() {
+    const faqButtons = document.querySelectorAll('.faq-item');
+    faqButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const item = this.closest('.faq-item');
+            const answer = item && item.querySelector('.faq-answer');
+            if (!answer) return;
+
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            if (expanded) {
+                // close
+                this.setAttribute('aria-expanded', 'false');
+                if (item) item.classList.remove('open');
+                answer.hidden = false;
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                requestAnimationFrame(() => {
+                    answer.style.maxHeight = '0px';
+                    answer.style.opacity = '0';
+                });
+
+                if (answer._faqTransitionHandler) {
+                    answer.removeEventListener('transitionend', answer._faqTransitionHandler);
+                }
+                const onClose = function(e) {
+                    if (e.propertyName === 'max-height') {
+                        answer.hidden = true;
+                        answer.style.maxHeight = '';
+                        answer.style.opacity = '0';
+                        answer.removeEventListener('transitionend', onClose);
+                        answer._faqTransitionHandler = null;
+                    }
+                };
+                answer._faqTransitionHandler = onClose;
+                answer.addEventListener('transitionend', onClose);
+            } else {
+                // open
+                this.setAttribute('aria-expanded', 'true');
+                if (item) item.classList.add('open');
+                answer.hidden = false;
+                answer.style.opacity = '0';
+                answer.style.maxHeight = '0px';
+                requestAnimationFrame(() => {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.opacity = '1';
+                });
+
+                if (answer._faqTransitionHandler) {
+                    answer.removeEventListener('transitionend', answer._faqTransitionHandler);
+                }
+                answer._faqTransitionHandler = null;
+            }
+        });
+    });
 });
